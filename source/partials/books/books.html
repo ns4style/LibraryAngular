@@ -1,0 +1,19 @@
+<div class="books" ng-controller="BooksCtrl">
+  <div class="books__filter">
+    <span class="books__filter-label">Author:</span>
+    <input ng-model="searchAuthor" class="books__filter-name">
+  </div>
+  <div class="books__filter">
+    <span class="books__filter-label">Name:</span>
+    <input ng-model="searchName" class="books__filter-name">
+  </div>
+  <div class="books__filter">
+    <span class="books__filter-label">Year:</span>
+    <input ng-model="searchYear" class="books__filter-year">
+  </div>
+  <div class="books__item" ng-repeat="book in books | filter:{author:searchAuthor,name:searchName,year:searchYear}">
+    <span class="books__item-author">[[book.author]]</span>
+    <span class="books__item-name">[[book.name]]</span>
+    <span class="books__item-year">[[book.year]]</span>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+coverage/
+build/
+www/
+e2e/
+.sass-cache/
+.idea/
+.tmp/
+dist/
